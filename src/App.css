@@ -2,37 +2,51 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+a { color:black } /* Globally */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* Each state */
+
+#daytime a:visited { text-decoration: none; color:black; }
+#daytime a:hover#daytime { text-decoration: none; color:black; }
+#daytimea:focus#daytime { text-decoration: none; color:black; }
+#daytime a:hover#daytime, #daytime a:active { text-decoration: none; color:black }
+
+#nighttime a:visited { text-decoration: none; color:white; }
+#nighttime a:hover { text-decoration: none; color:white; }
+#nighttime a:focus { text-decoration: none; color:white; }
+#nighttime a:hover, #nighttime a:active { text-decoration: none; color:white }
 
 .App-header {
-  background-color: #282c34;
+  background-color: white;
+  padding-left: 550px;
+  padding-right: 550px;
   min-height: 100vh;
   display: flex;
+	float:left;
+  text-align: justify;  
+  -moz-text-align-last: justify; /* For Firefox */
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+}
+#daytime {
+  color: black;
+  background-color: white;
+}
+#nighttime{
   color: white;
+  background-color: black;
+}
+@media only screen and (max-width: 800px) {
+  .App-header {
+    padding-left: 105px;
+    padding-right: 105px;
+  }
 }
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
